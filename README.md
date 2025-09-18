@@ -12,17 +12,17 @@ This project is Spark’s University Accountability Ordinance Project. By better
 
 # What data needs to be collected 
 * Percentage of student renters in each district 
-  * [Student Housing Data]([url](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?gid=1139465182#gid=1139465182))
-  * [Neighborhood boundaries]([url](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts)) 
+  * [Student Housing Data](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?gid=1139465182#gid=1139465182)
+  * [Neighborhood boundaries](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts) 
 * Housing conditions of student renters 
   * How many students per unit 
   * Access to resources (heat, water, etc…) 
-  * [Known housing violations]([url](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c)) 
-  * [311 Service Requests]([url](https://data.boston.gov/dataset/311-service-requests)) (frequency, type, and urgency of complaints)  
+  * [Known housing violations](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c)
+  * [311 Service Requests](https://data.boston.gov/dataset/311-service-requests) (frequency, type, and urgency of complaints)  
 
 # How you plan on modeling the data
 We currently plan to use clustering. 
 
 
-#What is your test plan? 
+# What is your test plan? 
 Withhold a 20% of the data for testing. 
