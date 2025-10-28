@@ -2,7 +2,7 @@
 
 # Data Preprocessing Methods Applied 
 At this point in our project, we:
-* Pulled zipcodes of student addresses from Student Housing Data 
+* Pulled zipcodes of student addresses from [Student Housing Data](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?gid=1139465182#gid=1139465182)
 * Standardized the zipcodes by 
   * concatenating “0” in front of zipcodes with 4 digits 
   * truncated zipcodes with over 5 digits
@@ -13,7 +13,7 @@ At this point in our project, we:
   * Zipcode
   * Population
   * Neighborhood
-* Pulled the sizes (by square miles) of neighborhoods of interest from Boston Neighborhood Boundaries into df_sizes
+* Pulled the sizes (by square miles) of neighborhoods of interest from [Boston Neighborhood Boundaries](https://gis.data.mass.gov/datasets/boston::boston-neighborhood-boundaries/about) into df_sizes
 * Iterated through the rows of the merged DataFrame and df_sizes to calculate density of students per square mile
 * Added density as a column into the merged DataFrame
 
@@ -27,3 +27,6 @@ By looking at the data visualizations, we can see that the neighborhoods with th
 In the future, we are planning on:
 * Splitting the neighborhoods into three groups: sparse, average, dense student populations and comparing these groups to datasets containing housing violations and 311 service requests. This way, we will be able to observe exploitative trends that occur between neighborhoods with different student population densities.
 * Using K-means clustering to find patterns between density, rent, and violations. This would reveal the most important features to consider when creating a model that will be able to accurately predict exploitative landlords.
+
+# Youtube Presentation Link
+[Presentation](youtube.com/watch?v=2hCfHRuMReU&feature=youtu.be)
