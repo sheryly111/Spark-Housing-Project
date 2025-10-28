@@ -29,4 +29,4 @@ In the future, we are planning on:
 * Using K-means clustering to find patterns between density, rent, and violations. This would reveal the most important features to consider when creating a model that will be able to accurately predict exploitative landlords.
 
 # Youtube Presentation Link
-[Presentation](youtube.com/watch?v=2hCfHRuMReU&feature=youtu.be)
+youtube.com/watch?v=2hCfHRuMReU&feature=youtu.be
