@@ -1,0 +1,10 @@
+pandas
+glob
+matplotlib 
+scikit-learn
+numpy 
+nltk.sentiment
+datetime
+textblob
+pickle 
+seaborn 
