@@ -1,32 +1,63 @@
 # Spark-Housing-Project Midterm Report
 
-# Data Preprocessing Methods Applied 
-At this point in our project, we:
-* Pulled zipcodes of student addresses from [Student Housing Data](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?gid=1139465182#gid=1139465182)
-* Standardized the zipcodes by 
-  * concatenating “0” in front of zipcodes with 4 digits 
-  * truncated zipcodes with over 5 digits
-* Counted instances of all unique zipcodes and stored them into a new DataFrame (df_pop_zip)
-* Made a csv file containing neighborhoods of interest (greater Boston area) and mapped their corresponding zipcodes (zippies.csv)
-* Standardized the new zippies.csv using the same method defined above and named the new DataFrame df_zip_names
-* Combined df_pop_zip with df_zip_names using the merge function to create a DataFrame containing information about 
-  * Zipcode
-  * Population
-  * Neighborhood
-* Pulled the sizes (by square miles) of neighborhoods of interest from [Boston Neighborhood Boundaries](https://gis.data.mass.gov/datasets/boston::boston-neighborhood-boundaries/about) into df_sizes
-* Iterated through the rows of the merged DataFrame and df_sizes to calculate density of students per square mile
-* Added density as a column into the merged DataFrame
+# Description
 
-# Data Modeling Methods Applied & Preliminary Results 
-We have chosen to use a horizontal bar graph to represent the densities of college students living in each neighborhood in the greater Boston area by a metric of students per square miles. 
+This project is part of Spark’s University Accountability Ordinance Project. Our goal is to better understand where students live and evaluate the housing conditions associated with those addresses. We aim to classify which landlords are problematic by training a model to predict if an address is problematic or not. By integrating data on 311 service requests, building violations, property assessments, neighborhood data, and student housing records from 2018-2024, we hope to find patterns and trends that contribute to student housing conditions in Boston.
 
-To visually get a better sense of the distribution compared to the entire population of students living in the greater Boston area, we also modeled the same data using a pie chart.
+# How to Build and Run 
+1. **Download Data**: [Link](www.https://drive.google.com/drivefolders/1YtY4Z3qbk1JIEX84lFkByQXLLRl_i1DC?usp=sharing.com)
+    - Data File Directory: 
+      - Boston_Neighborhood_Boundaries.csv
+      - neighborhood_sizes.csv
+      - building_and_property_violations.csv 
+      - live_street_address_management_sam_addresses.csv
+      - 311_calls/
+        - 2018.csv
+        - 2019.csv
+        - 2020.csv
+        - 2021.csv
+        - 2022.csv
+        - 2023.csv
+        - 2024.csv
+      - property_assessment/ 
+        - 2018.csv
+        - 2019.csv
+        - 2020.csv
+        - 2021.csv
+        - 2022.csv
+        - 2023.csv
+        - 2024.csv
 
-By looking at the data visualizations, we can see that the neighborhoods with the greatest student population density are Mission Hill and Chinatown/Leather District, and the least densely populated areas being West Roxbury and Hyde Park.
+2. **Run**: `make -f MakeFile all`  
 
-In the future, we are planning on:
-* Splitting the neighborhoods into three groups: sparse, average, dense student populations and comparing these groups to datasets containing housing violations and 311 service requests. This way, we will be able to observe exploitative trends that occur between neighborhoods with different student population densities.
-* Using K-means clustering to find patterns between density, rent, and violations. This would reveal the most important features to consider when creating a model that will be able to accurately predict exploitative landlords.
+# Data Processing 
+- **Data Collection**: We collected data from 2018-2024. Data include [311 calls](https://data.boston.gov/dataset/311-service-requests), known [building and property violations](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c), avaliable [building and property assessments](https://data.boston.gov/dataset/property-assessment), [student housing data](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?usp=drive_link&ouid=107346197263951251461&rtpof=true&sd=true), [SAM addresses](https://data.boston.gov/dataset/live-street-address-management-sam-addresses), and [neighborhood shape files](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts). 
+- **Data Cleaning**: 
+  1. We filtered databases to only include data from the years 2018-2024. 
+  2. Standardized columns to have the same types and format.
+  3. Removed irrelevant columns.  
+  4. Combined our data by matching properties by their addresses and the year that the data was sampled from. Now, we have all instances of cases made for each address in their respective years. 
 
-# Youtube Presentation Link
-youtube.com/watch?v=2hCfHRuMReU&feature=youtu.be
+# Modeling 
+- **Feature Extraction**: 
+  - Filled in NaNs 
+  - Standardized Values
+  - Text Features: length and word counts of case titles, case reasons, and case type descriptions. 
+  - Time Based Features: Dates that cases were opened, closed, and length of active cases 
+  - Cyclical Encoding for Month and Day 
+  - Number of cases per address per year 
+  - VADAR: Sentiment Intensity Analysis to score severity of cases 
+  - Frequency of cases 
+  - Escalation of severity 
+  - Rate of cases being resolved before their deadlines 
+  - Scoring of overall, internal, and external conditions 
+  - TF-IDF: On case reason, and case title 
+  - Truncated SVD on the TF-IDF Features 
+
+- **Model**: 
+  - We upsampled because our classes were severely imbalanced. 
+  - We trained a Logistic Regression model because we only had two class labels (problematic / not problematic)
+
+# Visualizations / Results 
+
+# Video 
