@@ -59,5 +59,5 @@ This project is part of Spark’s University Accountability Ordinance Project. O
   - We trained a Logistic Regression model because we only had two class labels (problematic / not problematic)
 
 # Visualizations / Results 
-
+![Description of image](images/density_bar_graph.png)
 # Video 
