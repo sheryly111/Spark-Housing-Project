@@ -1,10 +1,7 @@
-pandas
-glob
+pandas==2.3.3
 matplotlib 
 scikit-learn
 numpy 
-nltk.sentiment
-datetime
+nltk
 textblob
-pickle 
 seaborn 

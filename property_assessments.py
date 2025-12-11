@@ -5,7 +5,7 @@ df_list = []
 
 for year in years:
     df = pd.read_csv(f"./property_assessment/{year}.csv")
-    df["Year"] = year
+    df["year"] = year
     df_list.append(df)
 
 combined_df = pd.concat(df_list, ignore_index=True)
@@ -14,7 +14,7 @@ combined_df.to_csv("raw_property_assessment.csv", index=False)
 
 df = pd.read_csv("raw_property_assessment.csv")
 
-cols_keep = ["PID", "CM_ID", "GIS_ID", "ST_NUM", "ST_NAME", "UNIT_NUM", "CITY", "ZIP_CODE", "OWNER", "INT_COND", "EXT_COND", "OVERALL_COND", "BDRM_COND", "HEAT_TYPE", "AC_TYPE", "BED_RMS"]
+cols_keep = ["year", "PID", "CM_ID", "GIS_ID", "ST_NUM", "ST_NAME", "UNIT_NUM", "CITY", "ZIP_CODE", "OWNER", "INT_COND", "EXT_COND", "OVERALL_COND", "BDRM_COND", "HEAT_TYPE", "AC_TYPE", "BED_RMS"]
 
 df_new = df[cols_keep] 
 

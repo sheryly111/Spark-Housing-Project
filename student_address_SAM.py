@@ -25,8 +25,8 @@ SAM_matching_rows = SAM_matching_rows.drop(columns = ['shape_wkt', 'POINT_X', 'P
 matching_rows = matching_rows.drop(columns=['6a. street #', '6b. street name', '6c. street suffix'])
 
 
-display(matching_rows)
-display(SAM_matching_rows)
+# display(matching_rows)
+# display(SAM_matching_rows)
 print(SAM_matching_rows.shape)
 unique_unis = df['university'].unique()
 print(unique_unis)
@@ -170,14 +170,14 @@ threeoneone["FULL_ADDRESS"] = threeoneone["FULL_ADDRESS"].astype(str).replace("n
 bpviolations["FULL_ADDRESS"] = bpviolations["FULL_ADDRESS"].astype(str).replace("nan", "")
 
 # %%
-print("threeoneone:")
-display(threeoneone.head())
+# print("threeoneone:")
+# display(threeoneone.head())
 
-print("bpviolations:")
-display(bpviolations.head())
+# print("bpviolations:")
+# display(bpviolations.head())
 
-print("propassessments:")
-display(propassessments.head())
+# print("propassessments:")
+# display(propassessments.head())
 
 # %%
 print(df_matched.shape)

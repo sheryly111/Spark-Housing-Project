@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 # %%
 #open addresses csv 
-df = pd.read_csv("addresses.csv")
+df = pd.read_csv("StudentAddresses-2016-2024.xlsx - Sheet1.csv")
 
 df.head()
 
@@ -36,7 +36,7 @@ df_zip["6e. zip"] = df_zip["6e. zip"].apply(zip_standard)
 df_zip = df_zip.rename(columns={"6e. zip": "Zipcode"})
 df_zip.head()
 
-
+df_zip.to_csv("zippies.csv")
 
 # %%
 '''
@@ -108,7 +108,7 @@ plt.title("Student Density per Boston Neighborhood")
 plt.ylabel("Neighborhood")
 plt.xlabel("Students per Sq. Miles")
 plt.savefig("density_bar_graph")
-plt.show()
+#plt.show()
 
 # %%
 #PLOT PLOT PLOT !!!!
@@ -122,6 +122,6 @@ plt.legend(
 plt.title('Density of Students in Boston Neighborhoods')
 #plt.ylabel('') # Remove the default 'Value' label on the y-axis
 plt.savefig("density_pie_chart")
-plt.show()
+#plt.show()
 
 
