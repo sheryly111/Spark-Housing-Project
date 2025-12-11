@@ -60,14 +60,18 @@ This project is part of Spark’s University Accountability Ordinance Project. O
 
 # Visualizations / Results 
 ![Density Bar Graph](images/density_bar_graph.png)
+Above is our bar graph displaying the density of students housed in each of the neighborhoods in the greater Boston Area. From the graph, we can see that Chinatown/Leather District and Mission Hill holds the overwhelming majority of student residents, while West Roxbury and Mattapan has the least.
 
 ![Density Pie Chart](images/density_pie_chart.png)
-
+To gain a better sense of the density of each neighborhood compared to the entire population of students living in the Greater Boston Area, we also generated a pie chart for a more intuitive view at the ratios.
 
 ![Average Predicted Risk Per Year](images/avg_predicted_risk_per_year.png)
+We created this graph for the purpose of  visualizing how the risk (over all) of an address being problematic changes over the years. From the graph, we can see that the risk of problematic addresses increased dramatically over the years of 2020-2023.
 
 ![Distribution of Predicted Flags](images/distribution_predicted_flags.png)
+The purpose of this graph is to better visualize the ratio of predicted problematic landlords. We can see that around 1/3 of the landlords in our testing set are predicted to be problematic/exploitative.
 
 ![Landlord Total Property vs Problematic Ones](images/landlord_size_vs_num_problematic.png)
+This graph is a scatterplot representing the ratio of each landlord's total number of properties and their problematic ones, where each dot represents a landlord. We can see that for a good number of landlords, all their properties are problematic.
 
 # Video 
