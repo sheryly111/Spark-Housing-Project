@@ -670,6 +670,7 @@ plt.hist(test_complete['prob_address'], bins=2, color='#d9cfe6', edgecolor='whit
 plt.title("Distribution of Predicted Flags")
 plt.xlabel("Predicted Flag (0 = Not Problematic, 1 = Problematic)")
 plt.ylabel("Count of Properties")
+plt.savefig("distribution_predicted_flags.png")
 plt.show()
 
 
@@ -681,6 +682,7 @@ plt.xlabel("Year")
 plt.ylabel("Average Predicted Probability of Bad Property")
 plt.grid(True)
 plt.xticks(risk_over_time['year'])  # ensure all years are labeled
+plt.savefig("avg_predicted_risk_per_year.png")
 plt.show()
 
 print(test_complete.columns)
@@ -733,6 +735,7 @@ plt.xlabel("Total Properties Owned")
 plt.ylabel("num Problematic")
 plt.title("Do Larger Landlords Have More Problems!")
 plt.grid(True)
+plt.savefig("landlord_size_vs_num_problematic.png")
 plt.show()
 
 
