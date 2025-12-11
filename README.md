@@ -1,5 +1,8 @@
 # Spark-Housing-Project Midterm Report
 
+# Video 
+https://youtu.be/gMf8DwcJa3Y
+
 # Description
 
 This project is part of Spark’s University Accountability Ordinance Project. Our goal is to better understand where students live and evaluate the housing conditions associated with those addresses. We aim to classify which landlords are problematic by training a model to predict if an address is problematic or not. By integrating data on 311 service requests, building violations, property assessments, neighborhood data, and student housing records from 2018-2024, we hope to find patterns and trends that contribute to student housing conditions in Boston.
@@ -74,5 +77,3 @@ The purpose of this graph is to better visualize the ratio of predicted problema
 ![Landlord Total Property vs Problematic Ones](images/landlord_size_vs_num_problematic.png)
 This graph is a scatterplot representing the ratio of each landlord's total number of properties and their problematic ones, where each dot represents a landlord. We can see that for a good number of landlords, all their properties are problematic.
 
-# Video 
-https://youtu.be/gMf8DwcJa3Y
