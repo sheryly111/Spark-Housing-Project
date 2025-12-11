@@ -1,0 +1,14 @@
+venv:
+	python -m venv venv
+	. venv/bin/activate
+	
+install: venv
+	pip install -r requirements.txt
+
+preprocess: install
+	python density.py  && python building_property_violations.py && python 311_calls.py && python property_assessments.py && python student_address_SAM.py; echo "Preprocessing complete!"
+
+model: preprocess
+	python model.py; echo "Model trained and visualizations generated!"
+
+all: model
