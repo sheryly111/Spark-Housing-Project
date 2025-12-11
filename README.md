@@ -75,3 +75,4 @@ The purpose of this graph is to better visualize the ratio of predicted problema
 This graph is a scatterplot representing the ratio of each landlord's total number of properties and their problematic ones, where each dot represents a landlord. We can see that for a good number of landlords, all their properties are problematic.
 
 # Video 
+https://youtu.be/gMf8DwcJa3Y
