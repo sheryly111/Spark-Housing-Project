@@ -59,5 +59,15 @@ This project is part of Spark’s University Accountability Ordinance Project. O
   - We trained a Logistic Regression model because we only had two class labels (problematic / not problematic)
 
 # Visualizations / Results 
-![Description of image](images/density_bar_graph.png)
+![Density Bar Graph](images/density_bar_graph.png)
+
+![Density Pie Chart](images/density_pie_chart.png)
+
+
+![Average Predicted Risk Per Year](images/avg_predicted_risk_per_year.png)
+
+![Distribution of Predicted Flags](images/distribution_predicted_flags.png)
+
+![Landlord Total Property vs Problematic Ones](images/landlord_size_vs_num_problematic.png)
+
 # Video 
